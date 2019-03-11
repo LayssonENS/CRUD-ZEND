@@ -13,7 +13,7 @@ The easiest way to create a new Zend Framework project is to use
 then please install as per the [documentation](https://getcomposer.org/doc/00-intro.md).
 
 To create your new Zend Framework project:
-
+s
 ```bash
 $ composer create-project -sdev zendframework/skeleton-application path/to/install
 ```
