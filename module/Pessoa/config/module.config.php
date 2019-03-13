@@ -1,31 +1,38 @@
 <?php
 
-namespace Pessoa;
+use Pessoa\Controller\PessoaController;
+use Zend\ServiceManager\Factory\InvokableFactory;
 
-return [
-    'router' => [
-        'routes' => [
-            'pessoa' => [
-                'type' => \Zend\Router\Http\Segment::class,
-                'options' => [
-                    'route' => '/pessoa[/:action[/:id]]',
-                    'constraints' => [
-                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*', //definindo qual tipo de dado pode ser passado
-                        'id' => '[0-9]+'
-                    ],
-                    'default' => [
-                        'controller' => Controller\PessoaController::class,
-                        'action' => 'index',
-                    ],
+return[
+'router' => [
+    'routes' => [
+        'pessoa' => [
+            'type' => \Zend\Router\Http\Segment::class,
+            'options'   => [
+                'route' => '/pessoa[/:action[/:id]]',
+                'constraints' => [
+                    'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                    'id' => '[0-9]+'
+                ],
+                'defaults' => [
+                    'controller' => PessoaController::class,
+                    'action' => 'index',
                 ],
             ],
         ],
     ],
-    'view_manager' => [
-        'tamplate_path_stack' => [
-            'pessoa' => __DIR__ . '/../view',
-        ],
+],
+
+'controllers' => [
+    'factories' => [
+         PessoaController::class => InvokableFactory::class,
     ],
+],
+
+
+'view_manager' => [
+    'template_path_stack' => [
+        'pessoa' => __DIR__ . '/../view',
+    ],
+],
 ];
-// / pessoa/listar/todos
-// / pessoa/editar/1

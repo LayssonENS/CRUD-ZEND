@@ -31,5 +31,17 @@ CRIANDO MÓDULO ZEND
 - CRIAR PASTA DENTRO DE module
 1. DENTRO DA PASTA CRIADA CRIAR 4 PASTAS: config, test, src, view
     1.1 DENTRO DA PASTA config CRIAR ALQUIVO module.config.php (Retorna array no momento da execução podendo subscrever algumas configurações)
+    
+    1.2 DENTRO DA PASTA src CRIAR ARQUIVO Module.php. (Arquivo que é chamado quando o módulo é chamado pelo ZEND).
+        1.2.1 DENTRO DA PASTA src CRIAR PASTA CHAMADA Controller.
+            1.2.1.1 DENTRO DA PASTAS Controller CRIAR ARQUIVO PessoaController.php.
+    
+    1.3 DENTRO DA PASTA view CRIAR UMA PASTA CHAMADA pessoa
+        1.3.1 DENTRO DE pessoa CRIAR UMA NOVA PASTA CHAMADA pessoa
+            1.3.1.1 DENTRO DA SEGUNDA PASTA pessoa CRIAR index.phtml
 
-2. DENTRO DA PASTA src CRIAR ARQUIVO module.php.
+2. Dentro da pasta autoload no arquivo modules.config.php incluir o nome do novo módulo criado.
+
+3. Dentro do arquivo composer.json incluir no autoload PSR4 o modulo novo.
+
+4. Utilizar o comando  $composer update
