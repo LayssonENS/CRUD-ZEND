@@ -45,3 +45,8 @@ CRIANDO MÓDULO ZEND
 3. Dentro do arquivo composer.json incluir no autoload PSR4 o modulo novo.
 
 4. Utilizar o comando  $composer update
+
+
+
+ERROS POSSÍVEIS 
+404 The requested URL could not be matched by routing - Apagar arquivos .php da pasta cache.
