@@ -11,4 +11,33 @@ class PessoaController extends AbstractActionController
     {
         return new ViewModel();
     }
+
+    public function adicionarAction()
+    {
+        return new ViewModel();
+    }
+
+    public function editarAction()
+    {
+        return new ViewModel();
+    }
+
+    public function salvarAction()
+    {
+        return new ViewModel();
+    }
+
+    public function confirmacaoAction()
+    {
+        return new ViewModel();
+    }
+
+    /**
+     * /pessoa -> index
+     * /pessoa/adicionar -> adcionarAction
+     * /pessoa/salvar ->salvarAction
+     * /pessoa/editar/1 ->editarAction
+     * /pessoa/remover/1 ->removerAction
+     * /pessoa/conformacao ->confirmacaoAction
+     */
 }

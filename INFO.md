@@ -47,6 +47,18 @@ CRIANDO MÓDULO ZEND
 4. Utilizar o comando  $composer update
 
 
+ROTAS
+- A rota do tipo Segment direciona para determinada ação dentro de um controler.
+- Para criar uma rota declaramos no router, e depois colocamos sua configuração. Se casar a configuração com o que for informado na rota é direcionado para o console. 
+- Action é o metodo do console que vai ser acionado. INDEX é o padrão. O que pode passar no action é configurado embaixo. 
+- Id vai ser usado quando preisar editar elemento ou excluir.
+- O dafaults é configurado caso não seja informado algum parametro, por padrão o action é o index, o id tbm pode ser especificado.
+- Todo novo método que for adicionado precisa ser configurado no controller. Como padrão é metodoAction. E precisa ser criado uma view com o conteúdo.
+
 
 ERROS POSSÍVEIS 
 404 The requested URL could not be matched by routing - Apagar arquivos .php da pasta cache.
+
+
+ZEND DB 
+$ composer require zendframework/zend-db
