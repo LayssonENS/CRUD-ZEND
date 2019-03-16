@@ -4,7 +4,10 @@ namespace Pessoa\Model;
 
 use Zend\Db\TableGateway\TableGatewayInterface;
 
-public class PessoaTable
+use RuntimeException;
+
+class PessoaTable
+
 {
     private $tableGateway;
 
@@ -22,7 +25,14 @@ public class PessoaTable
     public function getPessoa($id)
     {
         $id = (int) $id;
-        $rowset = $this->tableGateway->select(['id' = $id]);
+
+        $rowset = $this->tableGateway->select(['id' => $id]);
         $row = $rowset->current();
+        if (!$row) {
+            throw new  RuntimeException(sprintf('Não foi encontrado o id %d', $id));
+
+        }
+        return $row;
     }
+
 }
