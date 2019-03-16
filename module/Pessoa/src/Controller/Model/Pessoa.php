@@ -2,13 +2,13 @@
 
 namespace Pessoa\Model;
 
-public class Pessoa
+class Pessoa
 {
-$id;
-$nome;
-$sobrenome;
-$email;
-$situacao;
+private $id;
+private $nome;
+private $sobrenome;
+private $email;
+private $situacao;
 
 public function exchangeArray(array $data)
 {
@@ -21,11 +21,64 @@ public function exchangeArray(array $data)
 
 public function getId()
 {
-    $this->id;
+    return $this->id;
 }
-
 public function setId($id)
 {
     $this->id = $id;
 }
+
+
+/**
+ * Get the value of nome
+ */ 
+public function getNome()
+{
+return $this->nome;
 }
+public function setNome($nome)
+{
+$this->nome = $nome;
+}
+
+
+/**
+ * Get the value of sobrenome
+ */ 
+public function getSobrenome()
+{
+return $this->sobrenome;
+}
+public function setSobrenome($sobrenome)
+{
+$this->sobrenome = $sobrenome;
+}
+
+
+/**
+ * Get the value of email
+ */ 
+public function getEmail()
+{
+return $this->email;
+}
+public function setEmail($email)
+{
+$this->email = $email;
+}
+
+
+/**
+ * Get the value of situacao
+ */ 
+public function getSituacao()
+{
+return $this->situacao;
+}
+public function setSituacao($situacao)
+{
+$this->situacao = $situacao;
+}
+
+}
+?>
