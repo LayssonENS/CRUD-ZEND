@@ -4,15 +4,15 @@ namespace Pessoa\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use Model\PessoaTable;
+
 
 class PessoaController extends AbstractActionController
 {
     private $table;
 
-    public function __contruct()
+    public function __construct($table)
     {
-        $this->table = new PessoaTable();
+        $this->table = new $table;
     }
     public function indexAction()
     {
