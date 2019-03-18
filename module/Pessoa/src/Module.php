@@ -25,9 +25,9 @@ class Module implements ConfigProviderInterface {
                 },
                 Model\PessoaTableGateway::class => function($container){
                     $dbAdapter = $container->(AdapterInterface::class);
-                    $resultSerPrototype = new ResultSet();
-                    $resultSerPrototype->setArrayObjectPrototype(new Model\Pessoa());
-                    return new TableGateway('pessoa', $dbAdapter,null,$resultSerPrototype);
+                    $resultSetPrototype = new ResultSet();
+                    $resultSetPrototype->setArrayObjectPrototype(new Model\Pessoa());
+                    return new TableGateway('pessoa', $dbAdapter,null,$resultSetPrototype);
                 },
             ]
         ];
