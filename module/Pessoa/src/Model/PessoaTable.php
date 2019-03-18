@@ -3,14 +3,12 @@
 namespace Pessoa\Model;
 
 use Zend\Db\TableGateway\TableGatewayInterface;
-
 use RuntimeException;
 
 class PessoaTable
-
 {
-    private $tableGateway;
 
+    private $tableGateway;
 
     public function __construct(TableGatewayInterface $tableGateway)
     {
