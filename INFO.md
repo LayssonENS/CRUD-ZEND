@@ -57,7 +57,12 @@ ROTAS
 
 
 ERROS POSSÍVEIS 
-404 The requested URL could not be matched by routing - Apagar arquivos .php da pasta cache.
+- 404 The requested URL could not be matched by routing.
+Apagar arquivos .php da pasta cache.
+
+- Connect Error: SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password
+BY 'root';  
 
 
 ZEND DB 
