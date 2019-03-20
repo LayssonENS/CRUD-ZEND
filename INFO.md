@@ -67,3 +67,7 @@ BY 'root';
 
 ZEND DB 
 $ composer require zendframework/zend-db
+
+
+ZEND FORM
+$ composer require zendframework/zend-form
