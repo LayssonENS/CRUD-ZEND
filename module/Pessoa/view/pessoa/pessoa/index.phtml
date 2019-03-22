@@ -12,7 +12,7 @@
         ?>
     <tr>
         <td><?= $pes->getId() ?></td>
-        <td><?= $pes->getNome() ?></td>
+        <td><?= $pes->getNome() ?> <?= $pes->getSobrenome() ?></td>
         <td><?= $pes->getSituacao() ?></td>
         <td>
             <a href="<?= $this->url('pessoa', ['action' => 'editar', 'id' => $pes->getId()]) ?>" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i></a>
