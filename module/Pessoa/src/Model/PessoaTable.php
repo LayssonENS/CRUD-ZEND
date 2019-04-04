@@ -33,6 +33,7 @@ class PessoaTable {
             'sobrenome' => $pessoa->getSobrenome(),
             'email' => $pessoa->getEmail(),
             'situacao' => $pessoa->getSituacao(),
+            'estado' => $pessoa->getEstado(),
         ];
 
         $id = (int) $pessoa->getId();

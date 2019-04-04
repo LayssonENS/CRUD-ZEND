@@ -14,6 +14,7 @@
         <td><?= $pes->getId() ?></td>
         <td><?= $pes->getNome() ?> <?= $pes->getSobrenome() ?></td>
         <td><?= $pes->getSituacao() ?></td>
+        <td><?= $pes->getEstado() ?></td>
         <td>
             <a href="<?= $this->url('pessoa', ['action' => 'editar', 'id' => $pes->getId()]) ?>" class="btn btn-info"><i class="glyphicon glyphicon-edit"></i></a>
             <a href="<?= $this->url('pessoa', ['action' => 'remover', 'id' => $pes->getId()]) ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>

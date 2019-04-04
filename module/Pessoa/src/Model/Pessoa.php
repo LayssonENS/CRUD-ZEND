@@ -9,6 +9,7 @@ class Pessoa implements \Zend\Stdlib\ArraySerializableInterface {
     private $sobrenome;
     private $email;
     private $situacao;
+    private $estado;
 
     public function exchangeArray(array $data) {
         $this->id = !empty($data['id']) ? $data['id'] : null;
@@ -16,6 +17,7 @@ class Pessoa implements \Zend\Stdlib\ArraySerializableInterface {
         $this->sobrenome = !empty($data['sobrenome']) ? $data['sobrenome'] : null;
         $this->email = !empty($data['email']) ? $data['email'] : null;
         $this->situacao = !empty($data['situacao']) ? $data['situacao'] : null;
+        $this->estado = !empty($data['estado']) ? $data['estado'] : null;
     }
 
     public function getId() {
@@ -58,6 +60,16 @@ class Pessoa implements \Zend\Stdlib\ArraySerializableInterface {
         $this->situacao = $situacao;
     }
 
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+
+    public function setEstado($estado)
+    {
+        $this->estado = $estado;
+    }
+
     public function getArrayCopy(): array {
         return [
             'id' => $this->id,
@@ -65,6 +77,7 @@ class Pessoa implements \Zend\Stdlib\ArraySerializableInterface {
             'sobrenome' => $this->sobrenome,
             'email' => $this->email,
             'situacao' => $this->situacao,
+            'estado' => $this->estado,
         ];
     }
 

@@ -21,7 +21,15 @@ class PessoaForm extends Form
         $this->add(new \Zend\Form\Element\Hidden('id'));
         $this->add(new \Zend\Form\Element\Text("nome", ['label' => "Nome"]));
         $this->add(new \Zend\Form\Element\Text("sobrenome", ['label' => "Sobrenome"]));
-        $this->add(new \Zend\Form\Element\Email("email", ['label' => "email"]));
+        $this->add(new \Zend\Form\Element\Email("email", ['label' => "Email"]));
+        $this->add(new \Zend\Form\Element\Select('estado', ['label' => "Estado", 'value_options' => [
+            'ES' => 'ES',
+            'SP' => 'SP',
+            'MG' => 'MG',
+            'RJ' => 'RJ',
+            'SC' => 'SC',
+            'OUTRO' => 'OUTRO',
+        ]]));
         $this->add(new \Zend\Form\Element\Select('situacao', ['label' => "Situação", 'value_options' => [
             'Ativo' => 'Ativo',
             'Inativo' => 'Inativo',
