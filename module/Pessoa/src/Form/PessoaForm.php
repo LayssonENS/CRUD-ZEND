@@ -28,7 +28,7 @@ class PessoaForm extends Form
             'MG' => 'MG',
             'RJ' => 'RJ',
             'SC' => 'SC',
-            'OUTRO' => 'OUTRO',
+            'OT' => 'OT',
         ]]));
         $this->add(new \Zend\Form\Element\Select('situacao', ['label' => "Situação", 'value_options' => [
             'Ativo' => 'Ativo',
